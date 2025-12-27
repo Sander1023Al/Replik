@@ -1,0 +1,437 @@
+.recording-screen {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+}
+
+/* Header */
+.recording-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.back-button,
+.settings-button {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.back-button:hover,
+.settings-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.progress-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+    max-width: 400px;
+    margin: 0 2rem;
+}
+
+.progress-info span {
+    color: #a0aec0;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    transition: width 0.3s;
+}
+
+/* Main */
+.recording-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+.line-info {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.character-badge,
+.emotion-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.character-badge {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.emotion-badge {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dialog-text {
+    max-width: 800px;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+}
+
+.dialog-text:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(102, 126, 234, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.dialog-text p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #e2e8f0;
+    margin: 0;
+    cursor: pointer;
+    user-select: none;
+    /* Prevent selection when double clicking to edit */
+}
+
+.edit-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.edit-textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #e2e8f0;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-align: center;
+    font-family: inherit;
+    resize: none;
+    padding: 0;
+    margin: 0;
+    min-height: 3em;
+    /* Minimum height for a couple of lines */
+    overflow: hidden;
+    /* Hide scrollbar if possible, auto-grow would be better but simple resize: vertical is okay for now */
+}
+
+.edit-textarea:focus {
+    /* Optional: subtle glow to indicate focus without being jarring */
+    text-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+.edit-hint {
+    font-size: 0.75rem;
+    color: #a0aec0;
+    opacity: 0.7;
+}
+
+/* Level meter */
+.level-meter {
+    width: 100%;
+    max-width: 400px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.level-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #48bb78 0%, #68d391 50%, #f6e05e 75%, #fc8181 100%);
+    transition: width 0.05s;
+}
+
+/* Recording timer */
+.recording-timer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: monospace;
+}
+
+.record-indicator {
+    color: #fc8181;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Recording controls */
+.recording-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-button {
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.nav-button:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.record-button {
+    padding: 1.25rem 3rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #fc8181 0%, #f56565 100%);
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 4px 15px rgba(252, 129, 129, 0.4);
+}
+
+.record-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(252, 129, 129, 0.5);
+}
+
+.record-button.recording {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    animation: recording-pulse 1.5s infinite;
+}
+
+@keyframes recording-pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 4px 30px rgba(102, 126, 234, 0.6);
+    }
+}
+
+/* Quick actions */
+.quick-actions {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.action-button {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.action-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Takes section */
+.takes-section {
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+.takes-section h3 {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    color: #a0aec0;
+}
+
+.takes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.take-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+
+.take-item.selected {
+    border-color: #48bb78;
+    background: rgba(72, 187, 120, 0.1);
+}
+
+.play-button,
+.delete-button {
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.play-button:hover,
+.delete-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.delete-button {
+    margin-left: auto;
+    opacity: 0.5;
+}
+
+.delete-button:hover {
+    opacity: 1;
+}
+
+.take-name {
+    font-weight: 500;
+}
+
+.take-duration {
+    color: #a0aec0;
+    font-size: 0.85rem;
+    font-family: monospace;
+}
+
+/* Footer */
+.recording-footer {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    overflow-x: auto;
+}
+
+.line-navigator {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.line-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+    min-width: 150px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #a0aec0;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.line-nav-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.line-nav-item.active {
+    background: rgba(102, 126, 234, 0.2);
+    border-color: #667eea;
+    color: #fff;
+}
+
+.line-nav-item.has-takes .line-number::after {
+    content: ' ✓';
+    color: #48bb78;
+}
+
+.line-number {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #667eea;
+}
+
+.line-preview {
+    font-size: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 130px;
+}
+
+/* Empty state */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 1rem;
+}
+
+.empty-state h2 {
+    color: #a0aec0;
+}
+
+.empty-state button {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+}

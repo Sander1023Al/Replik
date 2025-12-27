@@ -1,0 +1,6 @@
+id,character,text,emotion
+npc_001,Guard,"Halt! Who goes there?",angry
+npc_002,Guard,"You may pass.",neutral
+npc_003,Merchant,"Welcome to my shop! What would you like to buy?",friendly
+npc_004,Merchant,"That will be 50 gold coins.",neutral
+npc_005,Wizard,"I sense a great power within you...",mysterious

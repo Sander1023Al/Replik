@@ -1,0 +1,12 @@
+{
+    "version": "0.1.1",
+    "github": "https://github.com/EdgeTypE/Replik",
+    "appName": "Replik",
+    "description": "Replik is a specialized, open-source audio recording tool designed specifically for game developers, voice actors, and content creators who need to manage and record extensive dialogue scripts efficiently.",
+    "features": [
+        "Script Import (CSV/JSON)",
+        "Auto-Naming & File Management",
+        "Instant File Splitting",
+        "Metadata Generation for Game Engines"
+    ]
+}
