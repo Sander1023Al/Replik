@@ -1,6 +1,8 @@
 # Replik
 
-![Replik Logo](./public/logo.png)
+<p align="center">
+  <img src="./public/logo.png" alt="Replik Logo" width="200">
+</p>
 
 **Replik** is a specialized, open-source audio recording tool designed specifically for game developers, voice actors, and content creators who need to manage and record extensive dialogue scripts efficiently.
 
